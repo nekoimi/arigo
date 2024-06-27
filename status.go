@@ -118,7 +118,7 @@ type BitTorrentStatus struct {
 	// List of lists of announce URIs.
 	// If the torrent contains announce and no announce-list,
 	// announce is converted to the announce-list format
-	AnnounceList []URI                `json:"announceList"`
+	AnnounceList []AnnounceList       `json:"announceList"`
 	Comment      string               `json:"comment"`             // The comment of the torrent
 	CreationDate UNIXTime             `json:"creationDate,string"` // The creation time of the torrent
 	Mode         TorrentMode          `json:"mode"`                // File mode of the torrent
@@ -129,3 +129,5 @@ type BitTorrentStatus struct {
 type BitTorrentStatusInfo struct {
 	Name string `json:"name"` // name in info dictionary
 }
+
+type AnnounceList [][]string
