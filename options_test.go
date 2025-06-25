@@ -170,4 +170,6 @@ func TestOptionsAll(t *testing.T) {
 	assert.NoError(t, json.Unmarshal(data, &options), "Couldn't unmarshal JSON")
 
 	t.Log(options)
+	t.Log(options.MaxDownloadLimit)
+	t.Log(options.MaxConcurrentDownloads)
 }
